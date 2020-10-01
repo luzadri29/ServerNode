@@ -10,6 +10,15 @@ var dishRouter = require('./routes/dishRouter');
 var promoRouter = require('./routes/promoRouter');
 var leaderRouter = require('./routes/leaderRouter');
 
+const mongoose = require('mongoose');
+const Dishes = require('./model/dishes');
+
+const url = 'mongodb+srv://luzadri:LuCeCiTa29@cluster0.2xpnz.mongodb.net/conFusion?retryWrites=true&w=majority';
+const connect = mongoose.connect(url);
+
+connect.then((db) => {
+  console.log('Connected correctly to server')
+}, (err) => {console.log(err); });
 
 var app = express();
 
