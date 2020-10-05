@@ -12,6 +12,8 @@ var leaderRouter = require('./routes/leaderRouter');
 
 const mongoose = require('mongoose');
 const Dishes = require('./model/dishes');
+const Promos = require('./model/promotions');
+const Leaders = require('./model/leaders');
 
 const url = 'mongodb+srv://luzadri:LuCeCiTa29@cluster0.2xpnz.mongodb.net/conFusion?retryWrites=true&w=majority';
 const connect = mongoose.connect(url);
